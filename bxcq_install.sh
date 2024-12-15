@@ -11,14 +11,14 @@ BXCQ2_DIR=/var/www/bxcq
 
 sudo mkdir -p ${BXCQ_DIR}
 sudo wget --no-check-certificate https://github.com/minlearn/bxcq/raw/master/server.tar.gz -O /tmp/server.tar.gz
-sudo tar -xzvf /tmp/server.tar.gz -C /lib/x86_64-linux-gnu server/libmysqlclient.so.16 --strip-components=1
-sudo tar -xzvf /tmp/server.tar.gz -C ${BXCQ_DIR} --strip-components=1
+sudo tar -xzf /tmp/server.tar.gz -C /lib/x86_64-linux-gnu server/libmysqlclient.so.16 --strip-components=1
+sudo tar -xzf /tmp/server.tar.gz -C ${BXCQ_DIR} --strip-components=1
 sudo rm -rf /tmp/server.tar.gz
 
 sudo apt-get install default-mysql-client -y
-if [[ ! -f /app/bxcq/_db/inited ]]; then
-  (cd /app/bxcq/_db;sudo bash db.sh;sudo touch /app/bxcq/_db/inited)
-fi
+#if [[ ! -f /app/bxcq/_db/inited ]]; then
+  #(cd /app/bxcq/_db;sudo bash db.sh;sudo touch /app/bxcq/_db/inited)
+#fi
 
 
 # Install Apache, PHP, and necessary PHP extensions
