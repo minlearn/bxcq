@@ -32,7 +32,7 @@ echo "Installing bxcq..."
 sudo mkdir -p ${BXCQ2_DIR}
 cd ${BXCQ2_DIR}/..
 sudo wget https://github.com/minlearn/bxcq/releases/download/initial/html.tar.xz -O html.tar.xz
-sudo tar -xjf html.tar.xz -C ${BXCQ2_DIR} --strip-components=1
+sudo tar -xJf html.tar.xz -C ${BXCQ2_DIR} --strip-components=1
 sudo rm html.tar.xz
 sudo chown -R www-data:www-data ${BXCQ2_DIR}
 
