@@ -15,7 +15,7 @@ tar -xzf /tmp/server.tar.gz -C /lib/x86_64-linux-gnu server/libmysqlclient.so.16
 tar -xzf /tmp/server.tar.gz -C ${BXCQ_DIR} --strip-components=1
 rm -rf /tmp/server.tar.gz
 
-apt-get -y install default-mysql-client
+silent apt-get -y install default-mysql-client
 #if [[ ! -f /app/bxcq/_db/inited ]]; then
   #(cd /app/bxcq/_db;sudo bash db.sh;sudo touch /app/bxcq/_db/inited)
 #fi
